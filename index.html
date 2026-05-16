@@ -1,0 +1,85 @@
+<!-- to ek password Generator app hai  -->
+ <!-- wrapper ya container hai jiska backround color ye purple hai  
+  ek haeading- Password Generator
+  div me ek input fied aur usi me copy ka button 
+  tisre section me div me ..ek slider arrow 
+  ek div me check box aur uska label 
+  last me button-->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+        <div class="container">
+            <h1>PASSWORD GENERATOR</h1>
+            <div class="display-container">
+
+                <input readonly placeholder="Password" class="display" data-passwordDisplay >
+                
+                <button class="copyBtn" data-copy>
+                    <span class="tooltip" data-copyMsg></span>
+                    <img src="./assets/copy.png" alt="copy" width="20" height="20">
+                </button>
+            </div>
+
+            <div class="input-container">
+                <!-- password length section -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-length-number>20</p>
+                    <!-- badme fir javascrpit se ise slide me changes krege to number me change hona chaiye isliye yha custom attribute diya hai -->
+                </div>
+
+                <!-- slider -->
+                 <input type= "range" min="1" max="20" class="slider" step="1" data-length-slider>
+                 <!-- slider ko km jyada krnese lentgh me change ho rha hai to yha javascript loic use hoga ..to custom_attribute lgana hai -->
+
+                 <!-- checkboxes and their labels-->
+                  <div class="check">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Includes Uppercase letters </label>
+                  </div>
+
+                  <div class="check">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Includes Lowercase letters </label>
+                  </div> 
+
+                  <div class="check">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Includes Numbers letters </label>
+                  </div>
+
+                  <div class="check">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Includes Symbols letters </label>
+                  </div> 
+
+                  <!-- Strength section -->
+                   <div class="strength-container">
+                    <p>Strength</p>
+                    <div  class="indicator" data-indicator></div>
+                    <!-- ye ek circle hai jo javascript se colour bhi change krega  to isliye custom attribute bhi dena hai-->
+                   </div>
+
+                   <!-- generate password button-->
+                   <button class="generateButton">GENERATE PASSWORD</button>
+                </div>
+
+        </div>
+        <script src="script.js"></script>
+        
+  </body>
+  </html>
+
+ 
